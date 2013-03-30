@@ -1,0 +1,150 @@
+/*
+ * =============================================================
+ * BASIC
+ * =============================================================
+*/
+#chart {
+    float: left;
+}
+
+#item-info {
+    float: right;
+    width: 250px;
+}
+
+#users {
+    
+}
+
+.item-info {
+    
+}
+
+.users {
+    
+}
+
+.user {
+    cursor: pointer;
+}
+
+.user:hover {
+    color: #d62728;
+}
+
+.user-activeuser {
+    color: #1f77b4;
+}
+
+/*
+ * ==========================================================
+ * VISUALIZATION / SVG
+ * ==========================================================
+ */
+/*
+    DEFAULT
+*/
+
+svg {
+    background-color: #eee;
+}
+
+path.arc {
+    fill: #fff;
+}
+
+.node {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.node:hover {
+    fill: #d62728;
+}
+
+.link {
+    fill: none;
+    stroke: #666699; /* purple gray */
+    stroke-opacity: .4;
+    pointer-events: none;
+}
+
+.link-activeuser {
+    stroke: #1f77b4;
+    fill: none;
+    stroke-opacity: 1;
+    stroke-width: 2px;
+}
+
+/*
+    =================================
+    ITEM MOUSEOVER / MOUSEOUT EVENT
+    =================================
+*/
+
+.node.target {
+    fill: #d62728 !important;
+}
+
+.link.source {
+    stroke: #d62728;
+}
+
+.link.source, .link.target {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+}
+
+.user-item-mouseover {
+    color: #d62728;
+}
+
+/*
+    =================================
+    USER MOUSEOVER / MOUSEOUT EVENT
+    =================================
+*/
+
+/*
+    =================================
+    ITEM CLICK EVENT
+    =================================
+*/
+
+.item-clicked {
+    
+}
+
+.link-item-clicked {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+    stroke: #d62728;
+}
+
+.node-item-clicked {
+    fill: #d62728 !important;
+}
+
+.user-item-clicked {
+    color: #d62728;
+}
+
+/*
+    =================================
+    USER CLICK EVENT
+    =================================
+*/
+
+.user-clicked {
+    color: #d62728;
+}
+
+.link-user-clicked {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+    stroke: #d62728;
+}
+
+.node-user-clicked {
+    fill: #d62728 !important;
+}
