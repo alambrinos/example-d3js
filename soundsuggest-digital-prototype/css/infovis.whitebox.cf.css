@@ -95,3 +95,7 @@ path.arc {
 .node-user-clicked {
     fill: #d62728 !important;
 }
+
+button {
+    cursor: pointer;
+}
