@@ -47,6 +47,7 @@ root {
 
 #chart {
     float: left;
+    width: 500px;
 }
 
 #users {
