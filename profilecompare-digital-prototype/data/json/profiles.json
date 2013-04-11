@@ -1,0 +1,100 @@
+{
+    "items" :
+    [
+        {
+            "name" : "Noisedriver",
+            "users" :
+            [
+                "Joris"
+            ],
+            "totalvalue" : 60
+        },
+        {
+            "name" : "Balances",
+            "users" :
+            [
+                "Joris",
+                "Tim"
+            ],
+            "totalvalue" : 120
+        },
+        {
+            "name" : "Left Passage",
+            "users" :
+            [
+                "Joris",
+                "Tim"
+            ],
+            "totalvalue" : 70
+        },
+        {
+            "name" : "Miroist",
+            "users" :
+            [
+                "Joris"
+            ],
+            "totalvalue" : 70
+        },
+        {
+            "name" : "An Endless Sporadic",
+            "users" :
+            [
+                "Tim"
+            ],
+            "totalvalue" : 70
+        },
+        {
+            "name" : "Animals As Leaders",
+            "users" :
+            [
+                "Tim",
+                "Joris"
+            ],
+            "totalvalue" : 200
+        },
+        {
+            "name" : "On Wings of Wax",
+            "users" :
+            [
+                "Joris"
+            ],
+            "totalvalue" : 50
+        },
+        {
+            "name" : "Long Distance Calling",
+            "users" :
+            [
+                "Tim"
+            ],
+            "totalvalue" : 40
+        },
+        {
+            "name" : "Maybeshewill",
+            "users" :
+            [
+                "Joris"
+            ],
+            "totalvalue" : 50
+        },
+        {
+            "name" : "As I Watch You From Afar",
+            "users" :
+            [
+                "Tim"
+            ],
+            "totalvalue" : 100
+        },
+        {
+            "name" : "Theory of Machines",
+            "users" :
+            [
+                "Joris"
+            ],
+            "totalvalue" : 20
+        }
+    ],
+    "users" : {
+        "active_user"   : "Joris",
+        "user"          : "Tim"
+    }
+}
