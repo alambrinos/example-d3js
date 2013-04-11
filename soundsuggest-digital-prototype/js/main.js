@@ -36,7 +36,8 @@ function itemInfo(itemname, isrecommendation, user) {
             if (isrecommendation) {
                 d3.select('#item-info-controls')
                     .append('button')
-                    .text('Add to library');
+                    .text('Add to library')
+                    .attr('onclick', 'addRecommendation("' + itemname + '");');
             }
         },
         error: function(data) {

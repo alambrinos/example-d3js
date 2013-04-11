@@ -112,7 +112,7 @@ root {
     margin-bottom: 10px;
 }
 
-.item-info #item-info-description {
+.item-info p {
     padding-bottom: 5px;
 }
 
