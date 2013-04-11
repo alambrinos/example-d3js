@@ -17,12 +17,6 @@ function addRecommendation(bandname) {
     });
 }
 
-/**
- * @param {String} itemname
- * @param {boolean} isrecommendation
- * @param {String} user
- * @returns {undefined}
- */
 function itemInfo(itemname, isrecommendation, user) {
     lastfm.artist.getInfo({
         artist    : itemname,
@@ -44,4 +38,8 @@ function itemInfo(itemname, isrecommendation, user) {
             console.error(data.error + " " + data.message);
         }
     });
+}
+
+function userInfo(userName, isActiveUser, activeuser) {
+    
 }
