@@ -38,8 +38,9 @@ function itemInfo(itemname, isrecommendation, user) {
                 .append(bio);
             if (isrecommendation) {
                 d3.select('#item-info-controls')
-                    .append('button')
-                    .text('Add to library')
+                    .append('p')
+                    .classed('soundsuggest-button', true)
+                    .text('Add to Your Library')
                     .attr('onclick', 'addRecommendation("' + itemname + '");');
             }
         },
