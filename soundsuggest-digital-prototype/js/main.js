@@ -5,8 +5,17 @@ var lastfm = new LastFM({
     cache     : new LastFMCache()
 });
 
-d3.json("data/json/recommendations.json", function(error, data) {
-    whitebox.create(data);
+$(document).ready(function() {
+    $("#open-help").click(function() {
+        $.fancybox.open({
+            href : 'help.html',
+            type : 'iframe',
+            padding : 5
+        });
+    });
+    d3.json("data/json/recommendations.json", function(error, data) {
+        whitebox.create(data);
+    });
 });
 
 function addRecommendation(bandname) {

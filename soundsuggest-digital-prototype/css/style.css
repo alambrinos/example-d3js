@@ -11,20 +11,20 @@
 */
 
 @import 'reset.css';
-@import 'infovis.whitebox.cf.css';
+@import 'infovis/infovis.whitebox.cf.css';
 
 root { 
     display: block;
 }
 
-#page {
+#soundsuggest {
     /*margin-left: auto;
     margin-right: auto;*/
     margin-left: 100px;
     width: 1000px;
 }
 
-#header {
+#soundsuggest-header {
     border: 1px solid #eee;
     padding: 5px 5px 5px 5px;
     margin-top: 10px;
@@ -32,15 +32,15 @@ root {
     font-weight: bolder;
 }
 
-#header h1 {
+#soundsuggest-header h1 {
     font-size: larger;
 }
 
-#header h2 {
+#soundsuggest-header h2 {
     font-size: large;
 }
 
-#content {
+#soundsuggest-content {
     width: 1000px;
     height: 500px;
 }
@@ -48,6 +48,23 @@ root {
 #chart {
     float: left;
     width: 500px;
+}
+
+#soundsuggest-controls {
+    float: left;
+    width: 478px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+#soundsuggest-controls-ul {
+    list-style-type: none;
+}
+
+#soundsuggest-controls-ul li {
+    display: inline;
 }
 
 #users {
@@ -97,7 +114,7 @@ root {
 
 #item-info {
     margin-left: 10px;
-    width: 238px;
+    width: 248px;
     float: left;
 }
 
@@ -118,7 +135,7 @@ root {
 
 #user-info {
     margin-left: 10px;
-    width: 238px;
+    width: 248px;
     float: left;
 }
 
