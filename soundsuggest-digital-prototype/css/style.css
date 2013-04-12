@@ -73,6 +73,12 @@ root {
     float: left;
 }
 
+#users h3 {
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
 #users ul {
     list-style: none;
 }
