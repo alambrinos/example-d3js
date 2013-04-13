@@ -2,7 +2,7 @@
     "items" :
     [
         {
-            "name"  : "item.TheSmiths",
+            "name"  : "item.The_Smiths",
             "edges" :
             [
                 "item.Joy_Division.user.ActiveUser",
@@ -32,8 +32,8 @@
             "name" : "item.Joy_Division",
             "edges" :
             [
-                "item.TheSmiths.user.ActiveUser",
-                "item.TheSmiths.user.Carla",
+                "item.The_Smiths.user.ActiveUser",
+                "item.The_Smiths.user.Carla",
                 "item.Radiohead.user.ActiveUser",
                 "item.Radiohead.user.Elisa",
                 "item.The_Whitest_Boy_Alive.user.ActiveUser",
@@ -55,8 +55,8 @@
             "name" : "item.Radiohead",
             "edges" :
             [
-                "item.TheSmiths.user.ActiveUser",
-                "item.TheSmiths.user.Benjamin",
+                "item.The_Smiths.user.ActiveUser",
+                "item.The_Smiths.user.Benjamin",
                 "item.Joy_Division.user.ActiveUser",
                 "item.Joy_Division.user.Elisa",
                 "item.The_Whitest_Boy_Alive.user.ActiveUser",
@@ -77,10 +77,10 @@
             "name" : "item.The_Whitest_Boy_Alive",
             "edges" :
             [
-                "item.TheSmiths.user.ActiveUser",
-                "item.TheSmiths.user.Benjamin",
-                "item.TheSmiths.user.Carla",
-                "item.TheSmiths.user.Dominic",
+                "item.The_Smiths.user.ActiveUser",
+                "item.The_Smiths.user.Benjamin",
+                "item.The_Smiths.user.Carla",
+                "item.The_Smiths.user.Dominic",
                 "item.Joy_Division.user.ActiveUser",
                 "item.Joy_Division.user.Carla",
                 "item.Radiohead.user.ActiveUser",
@@ -104,8 +104,8 @@
             "name" : "item.Manu_Chao",
             "edges" :
             [
-                "item.TheSmiths.user.ActiveUser",
-                "item.TheSmiths.user.Dominic",
+                "item.The_Smiths.user.ActiveUser",
+                "item.The_Smiths.user.Dominic",
                 "item.Joy_Division.user.ActiveUser",
                 "item.Joy_Division.user.Elisa",
                 "item.Radiohead.user.ActiveUser",
@@ -127,7 +127,7 @@
             "name" : "item.Placebo",
             "edges" :
             [
-                "item.TheSmiths.user.Benjamin",
+                "item.The_Smiths.user.Benjamin",
                 "item.Joy_Division.user.Elisa",
                 "item.Radiohead.user.Benjamin",
                 "item.Radiohead.user.Elisa",
@@ -144,7 +144,7 @@
             "name" : "item.Depeche_Mode",
             "edges" :
             [
-                "item.TheSmiths.user.Dominic",
+                "item.The_Smiths.user.Dominic",
                 "item.The_Whitest_Boy_Alive.user.Dominic",
                 "item.Manu_Chao.user.Dominic",
                 "item.Coldplay.user.Dominic"
@@ -158,8 +158,8 @@
             "name" : "item.Coldplay",
             "edges" :
             [
-                "item.TheSmiths.user.Carla",
-                "item.TheSmiths.user.Dominic",
+                "item.The_Smiths.user.Carla",
+                "item.The_Smiths.user.Dominic",
                 "item.Joy_Division.user.Carla",
                 "item.The_Whitest_Boy_Alive.user.Carla",
                 "item.The_Whitest_Boy_Alive.user.Dominic",
@@ -180,7 +180,7 @@
             "active" : true,
             "owned" :
             [
-                "item.TheSmiths",
+                "item.The_Smiths",
                 "item.Joy_Division",
                 "item.Radiohead",
                 "item.The_Whitest_Boy_Alive",
@@ -192,7 +192,7 @@
             "active" : false,
             "owned" :
             [
-                "item.TheSmiths",
+                "item.The_Smiths",
                 "item.Radiohead",
                 "item.The_Whitest_Boy_Alive",
                 "item.Placebo"
@@ -203,7 +203,7 @@
             "active" : false,
             "owned" :
             [
-                "item.TheSmiths",
+                "item.The_Smiths",
                 "item.Joy_Division",
                 "item.The_Whitest_Boy_Alive",
                 "item.Coldplay"
@@ -214,7 +214,7 @@
             "active" : false,
             "owned" :
             [
-                "item.TheSmiths",
+                "item.The_Smiths",
                 "item.The_Whitest_Boy_Alive",
                 "item.Manu_Chao",
                 "item.Depeche_Mode",

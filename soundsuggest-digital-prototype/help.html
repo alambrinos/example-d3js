@@ -11,7 +11,40 @@
                 <h1>Help</h1>
             </div>
             <div id="content">
-                The Whitebox application.
+                <h2>Introduction</h2>
+
+                <p>This is the help page for the SoundSuggest application. SoundSuggest is a visual explanation system. Such a system uses visual elements to explain and provide insight into a complex concept. The concept in this case is the Last.fm recommender.</p>
+
+                <h3>What is a recommender system?</h3>
+
+                <p>A recommender system automatically generates item recommendations for a certain user. A recommender system may use various approaches, i.e., algorithms, to calculate these recommendations based on the user's preferences and/or behaviour.</p>
+
+                <h3>What are neighbours?</h3>
+
+                <p>The <em>Last.fm</em> recommender is based on an algorithm called collaborative filtering (CF). In this approach the system looks for similar users of the active user, i.e., you, based on similarities between artist libraries. A neighbour is then a user with a high similarity score to the active user.</p>
+
+                <h3>Application objective</h3>
+
+                <p>The goal of this explanation system is to provide insight into the quality of Last.fm item recommendations. By providing an approximation of the underlying concept of CF-based recommendation, the user can make an estimation of how the system calculated this recommendation.</p>
+
+                <h2>Functionality</h2>
+
+                <h3>Graph navigation</h3>
+
+                <p>The navigation through the graph is quite straightforward: simply hover or select item on the graph. The graph will highlight edges and nodes that occur in the same profile. The relevant profile(s) in the list of neighbours will be highlighted as well.</p>
+
+                <p>Similarly, when hovering or selecting a neighbour, the items that are in his/her profile will be highlighted on the graph.</p>
+
+
+                <h3>Adding an artist to your library</h3>
+
+                <p>To add an artist recommendation to your library, select one of the artists in the graph. Next click the button <em>Add to Your Library</em>. The visualization should now reload. The item is added to your library.</p>
+
+                <p>Undoing this operation is done in exactly the same manner as you would normally remove items from your library. Simply navigate to your library, and remove the relevant artist(s) from it.</p>
+
+                <h2>FAQ</h2>
+
+                <p>Feel free to ask questions in the comments section below!</p>
             </div>
             <div id="footer"></div>
         </div>
