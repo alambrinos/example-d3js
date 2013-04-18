@@ -78,8 +78,8 @@ function Whitebox() {
                 return map[""];
             },
             edges: function(nodes) {
-                var map = {},
-                    edges = [];
+                var map = {};
+                var edges = [];
 
                 nodes.forEach(function(d) {
                     map[d.name] = d;
@@ -116,7 +116,9 @@ function Whitebox() {
                     .data(links)
                     .enter().append("svg:path")
                     .attr("class", function(d) {
-                        return "link source-" + d.source.key + " target-" + d.target.key + " link-owner-" + d.owner + ((d.active)?" link-activeuser":"");
+                        return "link source-" + encodeItemName(d.source.key)
+                                + " target-" + encodeItemName(d.target.key)
+                                + " link-owner-" + d.owner + ((d.active)?" link-activeuser":"");
                     })
                     .attr("d", function(d, i) {
                         return line(splines[i]);
@@ -136,7 +138,7 @@ function Whitebox() {
                         return "node" + users;
                     })
                     .attr("id", function(d) {
-                        return "node-" + d.key;
+                        return "node-" + encodeItemName(d.key);
                     })
                     .attr("transform", function(d) {
                         return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
@@ -187,7 +189,7 @@ function Whitebox() {
                 .attr("class", function(user) {
                     var itemClasses = "";
                     userMap[user.name].items.forEach(function (item) {
-                        itemClasses += " user-owns-" + item + " ";
+                        itemClasses += " user-owns-" + encodeItemName(item) + " ";
                     });
                     return "user " + ((user.active)?" user-activeuser ":" ") + itemClasses;
                 })
@@ -213,7 +215,7 @@ function Whitebox() {
                 .attr("class", function(user) {
                     var itemClasses = "";
                     userMap[user.name].items.forEach(function (item) {
-                        itemClasses += " user-owns-" + item + " ";
+                        itemClasses += " user-owns-" + encodeItemName(item) + " ";
                     });
                     return "user " + ((user.active)?" user-activeuser ":" ") + itemClasses;
                 })
@@ -229,47 +231,47 @@ function Whitebox() {
         }
 
         function mouseoverItem(d) {
-            svg.selectAll("path.link.target-" + d.key)
+            svg.selectAll("path.link.target-" + encodeItemName(d.key))
                     .classed("target", true)
                     .each(updateNodes("source", true));
 
-            svg.selectAll("path.link.source-" + d.key)
+            svg.selectAll("path.link.source-" + encodeItemName(d.key))
                     .classed("source", true)
                     .each(updateNodes("target", true));
 
-            jQuery(".user-owns-" + d.key)
+            jQuery(".user-owns-" + encodeItemName(d.key))
                 .addClass("user-item-mouseover");
         }
 
         function mouseoutItem(d) {
-            svg.selectAll("path.link.source-" + d.key)
+            svg.selectAll("path.link.source-" + encodeItemName(d.key))
                     .classed("source", false)
                     .each(updateNodes("target", false));
 
-            svg.selectAll("path.link.target-" + d.key)
+            svg.selectAll("path.link.target-" + encodeItemName(d.key))
                     .classed("target", false)
                     .each(updateNodes("source", false));
 
-            jQuery(".user-owns-" + d.key)
+            jQuery(".user-owns-" + encodeItemName(d.key))
                 .removeClass("user-item-mouseover");
         }
         
         function updateNodes(name, value) {
             return function(d) {
                 if (value) this.parentNode.appendChild(this);
-                svg.select("#node-" + d[name].key).classed(name, value);
+                svg.select("#node-" + encodeItemName(d[name].key)).classed(name, value);
             };
         }
         
         function itemSelect(d) {
-            svg.selectAll("path.link.target-" + d.key)
+            svg.selectAll("path.link.target-" + encodeItemName(d.key))
                 .classed("link-item-clicked", true);
-            svg.selectAll("path.link.source-" + d.key)
+            svg.selectAll("path.link.source-" + encodeItemName(d.key))
                 .classed("link-item-clicked", true);
-            svg.select("#node-" + d.key)
+            svg.select("#node-" + encodeItemName(d.key))
                 .classed("item-clicked", true);
-            itemInfoDiv(d.key, d.recommendation);
-            jQuery(".user-owns-" + d.key)
+            itemInfoDiv(encodeItemName(d.key), d.recommendation);
+            jQuery(".user-owns-" + encodeItemName(d.key))
                 .addClass("user-item-clicked");
         }
         
@@ -290,6 +292,11 @@ function Whitebox() {
         
         function decodeItemName(artistname) {
             return artistname.toString().replace(/_/g, " ");
+        }
+    
+        function encodeItemName(artistname) {
+            //return artistname.toString().replace(/ /g, "/");
+            return artistname;
         }
         
         function itemDeselect(d) {
@@ -319,7 +326,7 @@ function Whitebox() {
                     .remove();
                 
                 itemSelect(d);
-            } else if (svg.select("#node-" + d.key).classed("item-clicked")) {
+            } else if (svg.select("#node-" + encodeItemName(d.key)).classed("item-clicked")) {
                 itemDeselect(d);
             } else {
                 itemDeselect(d);
@@ -364,10 +371,6 @@ function Whitebox() {
             div.append('div')
                 .attr('id', 'user-info-controls');
             userInfo(decodeUserName(userName), isActiveUser, activeuser);
-        }
-        
-        function decodeUserName(username) {
-            return username;
         }
         
         function userDeselect(user) {

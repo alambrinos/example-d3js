@@ -1,4 +1,6 @@
-var whitebox = new Whitebox();;
+var ACTIVE_USER = '';
+var SESSION_KEY = '';
+var whitebox = new Whitebox();
 var lastfm = new LastFM({
     apiKey    : '828c109e6a54fffedad5177b194f7107',
     apiSecret : '7c2f09e6eb84e8a6183c59e0bc574f70',
@@ -13,9 +15,23 @@ $(document).ready(function() {
             padding : 5
         });
     });
+    /**
     d3.json("data/json/recommendations.json", function(error, data) {
         whitebox.create(data);
     });
+    */
+    lastfm_data({
+        user    : ACTIVE_USER,
+        lastfm  : lastfm,
+        key     : SESSION_KEY,
+        limit_neighbours : 5,
+        limit_recommendations : 5,
+        limit_similar : 7,
+        limit_top_artists : 5
+    }, function(data) {
+        whitebox.create(data);
+    });
+    /**/
 });
 
 function addRecommendation(bandname) {
