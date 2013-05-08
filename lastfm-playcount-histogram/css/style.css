@@ -1,0 +1,27 @@
+/* 
+    Document   : style
+    Created on : 2-apr-2013, 12:00:59
+    Author     : Joris Schelfaut
+    Description:
+        
+*/
+
+/*@import 'reset.css';*/
+
+root { 
+    display: block;
+}
+
+div#chart {
+    width: 1200px;
+    height: 420px;
+    overflow-x: scroll;
+}
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px; /* We'll override height later */
+    background-color: teal;
+    margin-right: 2px;
+}
